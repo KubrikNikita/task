@@ -1,0 +1,23 @@
+.wrapper{
+    padding-left: 200px;
+    padding-top: 50px;
+    h1{
+        font-weight: 900;
+        font-size: 30px;
+        font-family: 'Open Sans';
+        padding-bottom: 10px;
+    }
+    p{
+        font-weight: 600;
+        font-family: 'Open Sans';
+        padding-bottom: 10px;
+    }
+}
+.button {
+    border: none;
+    padding: 20px 20px;
+    border-radius: 16px;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
