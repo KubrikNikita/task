@@ -1,23 +1,37 @@
 .wrapper {
-  padding-left: 200px;
-  padding-top: 50px;
+  padding: 50px 200px 0px 200px;
 }
 .wrapper h1 {
-  font-weight: 900;
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 24px;
   font-family: "Open Sans";
   padding-bottom: 10px;
 }
 .wrapper p {
-  font-weight: 600;
+  font-weight: 300;
+  font-size: 20px;
   font-family: "Open Sans";
   padding-bottom: 10px;
+}
+.wrapper .info__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }
 .wrapper .hidden {
   display: none;
 }
 .wrapper .show {
   display: flex;
+}
+.wrapper .posts__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .users__wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 .wrapper .dots {
   gap: 50px;
@@ -50,6 +64,12 @@
     height: 20px;
     transform: translate(0px, -20px);
   }
+}
+
+.buttons__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button {

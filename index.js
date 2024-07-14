@@ -1,8 +1,11 @@
-const button = document.querySelector('#button')
+const postsButton = document.querySelector('#posts__button')
 const body = document.querySelector('p')
 const title = document.querySelector('h1')
-const wrap = document.querySelector('#wrap')
-const dotsElement = document.querySelector('#dots');
+const postsWrap = document.querySelector('#posts__wrap')
+const dotsElementPosts = document.querySelector('#dots__posts');
+const usersButton = document.querySelector('#users__button')
+const usersWrap = document.querySelector('#users__wrap')
+const dotsElementUsers = document.querySelector('#dots__users');
 let count = 0;
 
 const getPosts = async () => {
@@ -10,25 +13,50 @@ const getPosts = async () => {
     const res = await jsonRes.json()
     return res;
 }
-dotsElement.classList.add("hidden")
-button.addEventListener('click', async () => {
-    dotsElement.classList.add("show");
+dotsElementPosts.classList.add("hidden")
+postsButton.addEventListener('click', async () => {
+    dotsElementPosts.classList.add("show");
     count = 0;
     const posts = await new Promise(resolve => setTimeout(async () => {
         resolve(await getPosts());
     }, 2000));
-    generateHtml(posts.slice(0, 19));
-    dotsElement.remove();
+    generateHtmlPosts(posts.slice(0, 19));
+    dotsElementPosts.classList.replace("show", "hidden");
 })
 
-function generateHtml(arr) {
+function generateHtmlPosts(arr) {
     for (let i = 0; i < arr.length; i++) {
         const currentItem = arr[i]
         const node = document.createElement("div")
         node.innerHTML = `<h1>${currentItem.title}</h1>\n<p>${currentItem.body}</p>`
-        wrap.appendChild(node)
+        postsWrap.appendChild(node)
     }
 }
+const getUsers = async () => {
+    const jsonRes = await fetch('https://jsonplaceholder.typicode.com/users')
+    const res = await jsonRes.json()
+    return res;
+}
+
+dotsElementUsers.classList.add("hidden")
+usersButton.addEventListener('click', async () => {
+    dotsElementUsers.classList.add("show");
+    count = 0;
+    const users = await new Promise(resolve => setTimeout(async () => {
+        resolve(await getUsers());
+    }, 2000));
+    generateHtmlUsers(users.slice(0, 19));
+    dotsElementUsers.classList.replace("show", "hidden");
+})
+function generateHtmlUsers(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        const currentItem = arr[i]
+        const node = document.createElement("div")
+        node.innerHTML = `<h1>${currentItem.name}</h1>\n<p>${currentItem.username}</p>`
+        usersWrap.appendChild(node)
+    }
+}
+
 
 
 
