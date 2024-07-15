@@ -17,7 +17,6 @@
     .info__wrapper{
         display: flex;
         justify-content: space-between;
-        gap: 20px;
         flex-direction: row;
     }
     .hidden {
@@ -29,15 +28,45 @@
     .posts__wrapper{
         display: flex;
         flex-direction: column;
+        width: 30%;
+        align-items: start;
     }
     .users__wrapper{
         display: flex;
         flex-direction: column;
+        text-align: center;
+        width: 30%;
+        align-items: center;
+    }
+    .user__id_wrapper{
+        display: flex;
+        flex-direction: column;
         text-align: right;
+        width: 30%;
+        align-items: end;
+    }
+    .input-box{
+        padding-top: 20px;
+        display: flex;
+        justify-content: end;
     }
     .dots{
+        display: flex;
         gap: 50px;
         padding-top: 50px;
+        align-items: center;
+        #dots__posts{
+            display: flex;
+            justify-content: start;
+        }
+        #dots__users{
+            display: flex;
+            justify-content: center;
+        }
+        #dots__user_id{
+            display: flex;
+            justify-content: end;
+        }
         .dot {
             width: 20px;
             height: 20px;
