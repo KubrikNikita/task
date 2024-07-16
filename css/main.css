@@ -1,53 +1,36 @@
 .wrapper {
-  padding: 50px 200px 0px 200px;
+  padding: 50px 100px 0px 100px;
 }
 .wrapper h1 {
   font-weight: 600;
   font-size: 24px;
   font-family: "Open Sans";
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 .wrapper p {
   font-weight: 300;
   font-size: 20px;
   font-family: "Open Sans";
   padding-bottom: 10px;
+  line-height: 1.5;
 }
 .wrapper .info__wrapper {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
 }
-.wrapper .hidden {
-  display: none;
-}
-.wrapper .show {
-  display: flex;
-}
-.wrapper .posts__wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  align-items: start;
-}
-.wrapper .users__wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 30%;
-  align-items: center;
-}
 .wrapper .user__id_wrapper {
   display: flex;
   flex-direction: column;
-  text-align: right;
-  width: 30%;
-  align-items: end;
+  text-align: center;
+  width: 100%;
+  align-items: center;
 }
 .wrapper .input-box {
   padding-top: 20px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 .wrapper .dots {
   display: flex;
@@ -99,7 +82,7 @@
 .buttons__wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .button {

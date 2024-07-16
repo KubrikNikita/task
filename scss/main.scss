@@ -1,11 +1,12 @@
 .wrapper {
-    padding: 50px 200px 0px 200px;
+    padding: 50px 100px 0px 100px;
    
     h1 {
         font-weight: 600;
         font-size: 24px;
         font-family: 'Open Sans';
         padding-bottom: 10px;
+        padding-top: 10px
     }
 
     p {
@@ -13,42 +14,24 @@
         font-size: 20px;
         font-family: 'Open Sans';
         padding-bottom: 10px;
+        line-height:1.5;
     }
     .info__wrapper{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
     }
-    .hidden {
-        display: none;
-    }
-    .show{
-        display: flex;
-    }
-    .posts__wrapper{
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        align-items: start;
-    }
-    .users__wrapper{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        width: 30%;
-        align-items: center;
-    }
     .user__id_wrapper{
         display: flex;
         flex-direction: column;
-        text-align: right;
-        width: 30%;
-        align-items: end;
+        text-align: center;
+        width: 100%;
+        align-items: center;
     }
     .input-box{
         padding-top: 20px;
         display: flex;
-        justify-content: end;
+        justify-content: center;
     }
     .dots{
         display: flex;
@@ -105,7 +88,7 @@
 .buttons__wrapper{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center
 }
 .button {
     border: none;
